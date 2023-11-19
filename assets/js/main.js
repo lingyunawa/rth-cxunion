@@ -5,14 +5,13 @@ function newSave(){
     });
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "http://154.7.177.68:3927/ynfou/post", true);
-    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
             // 请求成功完成
             console.log(xhr.responseText);
         }
     };
-    xhr.send("data=stop");
+    xhr.send("stop");
 
 }
 
